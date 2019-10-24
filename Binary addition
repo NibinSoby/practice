@@ -1,0 +1,23 @@
+#include "stdio.h"
+int binadd (int a,int b);
+{
+int carry=0;
+while (b!=0)
+{
+carry=(a&b)<<1;
+a=a^b;
+b=carry;
+}
+return a;
+}
+int main ()
+{
+int n1,n2,binaddition;
+printf("Input the first number");
+scanf("%d",&n1);
+printf("Input the second number");
+scanf("%d",&n2);
+binaddition=binadd(n1,n2);
+printf("binary addition%d/n",binaddition);
+return 0;
+}
